@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="{{ asset('img/fav.png') }}">
+
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </head>
+
+    <body>
+
+            <header class="mainMenu">
+                    <nav>
+                        <ul>
+                            <li><a href="{{ path('home') }}">Home</a></li>
+                            <li><a href="{{ path('about') }}">About</a></li>
+                            <li><a href="{{ path('report') }}">Report</a></li>
+                            <li><a href="{{ path('lucky') }}">Lucky</a></li>
+                        </ul>
+                    </nav>
+            </header>
+            <div class="side-left" > </div>
+            <main>
+                    {% block body %}{% endblock %}
+            </main>
+            <div class="side-right"> </div>
+            <footer>
+                <ul>
+                    <li><a href="https://github.com/dbwebb-se/mvc/">Kursens Github</a></li>
+                    <li><a href="https://github.com/felixtroe/report"> Personliga Github</a></li>
+                </ul>
+            </footer>
+    </body>
+</html>

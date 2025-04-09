@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Lucky{% endblock %}
+
+{% block body %}
+    <h1>Lucky</h1>
+    <p style="text-align: center;">Detta är lyckonummret: {{ number }}</p>
+
+        <p style="text-align: center">Klicka på bilden</p>
+        <a style="border" href="{{ asset('img/winning.png') }}">
+            <img src="{{ asset('img/dog.png') }}" alt="">
+        </a>
+{% endblock %}

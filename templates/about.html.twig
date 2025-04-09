@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block title %}About{% endblock %}
+
+{% block body %}
+    <h1>About</h1>
+    <div class="mvc">
+      <p>Model-View-Controller är ett designmönster som används oftast i samband med objektorienterad språk.</p>
+      <p>MVC innebär att man delar upp programmet i tre separata delar som utför specifika uppgifter:</p>
+      <ul class="mvcUL">
+        <li>Model - hantera logik och data</li>
+        <li>Vy - hanterar det som presenteras för användaren</li>
+        <li>Kontroller - hanterar den data som skickas mellan vy och model, knyter ihop model och vy</li>
+      </ul>
+      <p>I den här kursen ska vi använda oss av  designmönstret MVC och programmera i PHP med hjälp av ramverket Symfony</p>
+      <p>Symfony är ett open source ramverk som gör det möjligt att strukturera koden enligt arkitektmönstret MVC</p>
+      <p>Symfony tillämpar strukturen av MVC i den här kursen på följande sätt:</p>
+       <ul class="mvcUL">
+        <li>Model - hanteras med hjälp av ORM</li>
+        <li>Vy - hanteras i templatemappen med hjälp av twig</li>
+        <li>Kontroller - hanteras i srcmappen med hjälp av PHP </li>
+      </ul>
+       <img src="{{ asset('img/mvc.png') }}" alt="dator">
+    </div>
+{% endblock %}

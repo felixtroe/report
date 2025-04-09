@@ -1,0 +1,39 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Repor{% endblock %}
+
+{% block body %}
+    <h1>Report</h1>
+    <h2 id="kmom01">kmom 01</h2>
+<p>Berätta kort om dina förkunskaper och tidigare erfarenheter kring objektorientering.</p>
+<br>
+<p> Minna förkunskaper om objektorienterad programmering är Java jag har programmerat med MVC innan har bland annat gjort ett sudokuspel. Jag har även gjort ett spel med hjälp av C och MVC samt bibloteket SDL. </p>
+<p>Jag kommer ej ihåg allt men det som jag kommer ihåg är att kontrollern hantera datan mellan model och vyn. </p>
+<br>
+<p>Berätta kort om PHPs modell för klasser och objekt. Vilka är de grunder man behöver veta/förstå för att kunna komma igång och skapa sina första klasser?</p>
+<br>
+<p> En klass är en mall för ett objekt och med hjälp av klasser kan man skapa en eller flera objekt. </p>
+<p> De man ska tänka på när man skapar klassen är vad för egenskaper du vill att objektet ska ha när det skapas och de egenskaper defineras bland annat med hjälp av en konstruktor </p>
+<p> En annan sak man ska tänka på när man skapar en klass är att klassen endast utför en uppgift </p>
+<p> Det är även viktigt att tänka på om klassens datamedlemmar ska vara publika eller privata. Generellt brukar datamedlemmar vara privata för att dölja implementeringen av koden vilket ökar säkerheten</p>
+<br>
+<p>Reflektera kort över den kodbas, koden, strukturen som användes till uppgiften me/report, hur uppfattar du den?</p>
+<br>
+<p>Jag uppfattar kodbasen som ganska tydlig där controller moduler eller modulen ska vara i src mappen och vyn hanteras i templatemappen.</p>
+<p>Det var även väldigt enkelt och bra att skicka data till templates och att definera routes till specifika sidor på hemsidan</p>
+<p>Jag undrade lite vad filen <code>Kernel.php</code> gör eftersom jag känner igen begreppet från operativsystem och undrade ifall det är inspirerat av Kernels uppgift i ett operativsystem</p>
+<p>De har några likheter istället för att hantera I/O och data som i ett OS, ansvarar <code>Kernel.php</code> att användaren hamnar på rätt route genom att söka i <code>src/Controller/</code> </p>
+<br>
+<p>Med tanke på artikeln “PHP The Right Way”, vilka delar in den finner du extra intressanta och värdefulla? Är det några särskilda områden som du känner att du vill veta mer om? Lyft fram några delar av artikeln som du känner mer värdefulla.</p>
+<br>
+<p>En sak som jag tyckte var intressant var möjligheten att spara objekt i cache tillexempel med hjälp av APCu.
+Det blir verkar vara ett kostandseffektivt sätt om man arbetar med en stor databas. Att spara objet i cachen ökar även hastigheten vid användning av databas.</p>
+<p>MVC påminer mycket om hur jag gjorde i Java man har en modul som hantera setters och getters funktioner. Controller anropar sedan dessa funktioner för att ändra eller hämta data.
+Det känns bekant.</p>
+<br>
+<p> Vilken är din TIL för detta kmom? </p>
+<br>
+Jag har lärt mig hur man skapar routes i PHP. Samt sätta upp grunderna för att göra ett projekt med hjälp av PHP och Symfony.
+
+
+{% endblock %}
