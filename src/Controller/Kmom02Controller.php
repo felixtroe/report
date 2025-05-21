@@ -96,7 +96,7 @@ class Kmom02Controller extends AbstractController
         }
 
 
-        $deck->shuffle();
+        $deck->shuffleCards();
         $session->set("deck_of_cards", $deck);
         return $this->redirectToRoute('show_deck');
     }
