@@ -31,9 +31,42 @@ Det blir verkar vara ett kostandseffektivt sätt om man arbetar med en stor data
 <p>MVC påminer mycket om hur jag gjorde i Java man har en modul som hantera setters och getters funktioner. Controller anropar sedan dessa funktioner för att ändra eller hämta data.
 Det känns bekant.</p>
 <br>
-<p> Vilken är din TIL för detta kmom? </p>
+<p>Vilken är din TIL för detta kmom? </p>
 <br>
-Jag har lärt mig hur man skapar routes i PHP. Samt sätta upp grunderna för att göra ett projekt med hjälp av PHP och Symfony.
+<p>Jag har lärt mig hur man skapar routes i PHP. Samt sätta upp grunderna för att göra ett projekt med hjälp av PHP och Symfony. </p>
+
+<br>
+<h2 id="kmom02">kmom 02</h2>
+
+<p> <strong>Arv</strong> defineras med hjälp av en basklass som innehåller gemensamma egenskaper för relaterade klasser inom ett specfikt område. </p>
+<p> Det resulterar i att underklasserna ej behöver definera dessa egenskaper eller funktioner vilket bland annat minskar kodupprepning samt att koden blir mer strukturerad.</p>
+
+<p> <strong> Komposition </strong> innebär att ett objekts livslängd är beronde av ett annat objekt. Exempelvis kort och hand kan vara en komposition men även en aggregation, det är kodens implementation som bestämmer
+vilken relation klasserna har. </p>
+
+<p> <strong> Interface </strong> i <code> PHP </code> fungerar liknande som i <code> Java </code> och påminer om arv. Om en klass implementerar ett interface måste klassen använda sig av funktionerna samt definera dom.
+
+<p> <strong> Trait </strong> kan liknas vid interface fast funktionerna är definerade i trait vilket innebär att en klass kan implementera färdiga funktioner.</p>
+
+<br>
+<p> För att lösa uppgiften utgick jag en del från övningen som man fick göra för att sätta upp strukturen enligt MVC. </p>
+<p> För att sedan använda mig av <code> Dump and Die </code> för att se vilken data sessionerna eller <code> arrayerna </code> hade. </p>
+<p> Själva konceptet och strukturen gällande MVC är detsamma som i andra språk jag har arbetat med.</p>
+<p> Därför känner jag mig bekväm i att fördela uppgifterna mellan kontrollern och logiken samt vyn. </p>
+<p> Det som hade kunnat vara bättre är bland annat att använda sig av funktionen <code>shuffle</code> istället för att skriva göra en egen loop </p>
+<br>
+<p> Det finns säkert andra saker som även hade kunnat förbättrats, man hade kunnat ha en klass som hanterar all logik genom getters och setters funktioner för att göra koden lätt att underhålla</p>
+<p> För tillfället är det inte så stor skillnad från andra objektorienterade språk </p>
+<p> Det finns några skillnader som jag har hittat men det gäller referenser och att datatyper i PHP inte är immutable ifall man inte definierar immutable </p>
+<p> Att arbeta med symfony underlättar speciellt när det kommer till routes och sessioner, principen för MVC är samma som i andra språk skillnaden är enbart att sessioner hanterar data. </p>
+<p> Ifall man tänker att en session är en stor array med diverse data underlättar det arbete. </p>
+<br>
+<p> Det jag har lärt mig är bland annat att refrenser exiterar men ej minnesadresser. </p>
+<p> Jag har även lärt mig hur man hanterar session i symfony med hjälp av <code> POST </code> och <code> GET </code> samt hur man skriver och läser data till och från ett session. </p>
+<p> jag har dessutom förstått vad som ska skickas mellan vyn och kontrollern </p>
+
+
+
 
 
 {% endblock %}

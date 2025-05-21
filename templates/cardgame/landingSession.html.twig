@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Session{% endblock %}
+
+{% block body %}
+<h1>Session for card game</h1>
+
+<p>Deck: </p>
+
+{% for  card  in  deckOfCards %}
+       <p> {{card.suit}} {{card.card}}</p>
+{% endfor %}
+
+<p>Hand </p>
+{% for  card  in  drawnCard %}
+       <p> {{card.suit}} {{card.card}}</p>
+{% endfor %}
+
+<p> antal kort i kortleken: </p>
+<p>{{CardsInDeck}} </p>
+
+<p> antal kort i handen: </p>
+<p>{{numberOfCards}}</p>
+
+{{ include('flash.html.twig') }}
+{% endblock %}

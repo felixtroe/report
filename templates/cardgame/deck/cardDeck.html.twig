@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<div>
+<a href="{{ path('card') }}">Tillbaka</a>
+</div>
+
+{% for card in deckOfCards %}
+  <span class={{card["suit"]}}>{{card["card"]}}</span>
+{% endfor %}
+
+{% endblock %}

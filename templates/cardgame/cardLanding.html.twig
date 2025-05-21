@@ -1,0 +1,41 @@
+{% extends "base.html.twig" %}
+{% block title %}Kortspel{% endblock %}
+{% block body %}
+ <h1>Kortspel</h1>
+{{ include('flash.html.twig') }}
+
+<div class="card">
+<form method="post" action="">
+    <p>
+        <input type="submit" name="Deck" value="Deck"
+    onClick="this.form.action='{{ path('card_deck_post') }}';">
+       <input type="submit" name="shuffle" value="shuffle"
+    onClick="this.form.action='{{ path('shuffle') }}';">
+       <input type="submit" name="draw" value="draw"
+    onClick="this.form.action='{{ path('draw') }}';">
+       <input type="submit" name="reset" value="reset"
+    onClick="this.form.action='{{ path('delete') }}';">
+    </p>
+    <p>Take
+      <input type="submit" name="drawNum" value="Draw 5 cards"
+    onClick="this.form.action='{{ path('num_draw_cards', {num: 5}) }}';">
+    or
+     <input type="submit" name="drawNum" value="Draw 10 cards"
+    onClick="this.form.action='{{ path('num_draw_cards', {num: 10}) }}';">
+    Cards.
+    </p>
+</form>
+</div>
+
+
+<h2> UML </h2>
+<p> Klassen <code> Card </code> är uppbyggd för att hantera data om värdet och valör. </p>
+<p> <code> Card </code> ärvs av <code>CardGraphic </code> som representerar själva kortet för användaren </p>
+<p> <code> DeckOfCards </code> relation till <code> CardGraphic </code> är komposition eftersom <code> deckOfCards </code> är uppbyggt av  <code> CardGraphic </code> </p>
+<p> <code> DeckOfCards </code> hanterar bland annat när ett eller flera kort dras från kortleken genom att retunerar ett kort </p>
+<p> Kontrollern som är beronde av <code >deckOfCards</code>, <code> CardGraphic </code> och <code> CardHand </code> hanterar korten som dras och lägger sedan in dragna kort i hand </p>
+<p> <code>CardHands </code> relation till <code> CardGraphic </code> är även en komposition eftersom specifika kort tillhör en specfik hand. </p>
+
+<img class = "UML" src="{{ asset('img/uml.png') }}" alt="UML">
+
+{% endblock %}

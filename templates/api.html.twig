@@ -1,0 +1,34 @@
+{% extends "base.html.twig" %}
+
+{% block title %}API{% endblock %}
+
+{% block body %}
+ <a href="{{ path('api_lucky') }}"> Lucky</a>
+ <p> Väljer ett lyckonummer från 0 till 100</p>
+ </br>
+ <a href="{{ path('api_quote') }}"> Quote</a>
+ <p> Väljer ett citat av 3 möjliga </p>
+ </br>
+ <a href ="{{ path('api_deck') }}"> Deck </a>
+ <p> Ger en oblandad kortlek med värde och valör </p>
+ </br>
+
+ <form method="post" action="">
+    <p>
+        <input type="submit" name="shuffle" value="shuffle"
+    onClick="this.form.action='{{ path('api_shuffle') }}';">
+    </p>
+     <p> Ger en blandad kortlek med värde och valör hantera minne med hjälp av session </p>
+    <p>
+        <input type="submit" name="draw" value="draw"
+    onClick="this.form.action='{{ path('api_draw') }}';">
+    </p>
+    <p> Drar ett kort och skriver hur många kort som finns kvar i kortleken hantera minne med hjälp av session </p>
+      <p>
+        <input type="submit" name="drawNum" value="Draw 5 cards"
+    onClick="this.form.action='{{ path('api_draw_num', {num: 5}) }}';">
+    </p>
+    <p> Drar fem kort och skriver hur många kort som finns kvar i kortleken hantera minne med hjälp av session </p>
+</form>
+
+{% endblock %}
