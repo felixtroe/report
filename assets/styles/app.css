@@ -72,12 +72,13 @@ img {
 
 a {
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color, font-size 0.3s;
 }
 
 
 a:hover {
     color: #48A6A7;
+    font-size: 2em;
 }
 
 
