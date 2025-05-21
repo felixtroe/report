@@ -33,7 +33,7 @@ class kmom02ControllerJSON
         $cards = new DeckOfCards();
         $hand = new CardHand();
 
-        $cards -> shuffle();
+        $cards -> shuffleCards();
         $deck = $cards -> getDeckOfCards();
         $data = $this-> jsonData($deck);
 

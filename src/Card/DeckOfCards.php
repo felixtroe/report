@@ -33,7 +33,7 @@ class DeckOfCards
         return $this->deckOfCards;
     }
 
-    public function shuffle(): void
+    public function shuffleCards(): void
     {
 
         for ($index = 0; $index < count($this->deckOfCards); $index++) {
